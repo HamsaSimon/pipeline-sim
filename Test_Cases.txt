@@ -1,0 +1,23 @@
+Test_case 1:
+lw $t0,0($s1) 
+add $t0,$t0,$s2	  
+sw  $t0, 4($s1)
+sub $t3, $t0,$s2
+
+Outcome: Successful
+
+Test_case 2:
+lw $r1, 0($r2)
+add $r4, $r4, $r5
+add $r1, $r1, $r5
+sw $r1, 0($r2)
+
+Outcome: Successful
+
+Test_case 3:
+lw $t0 4($s0)
+sw $t0 8($s1)
+sub $t2 $t0 $t1
+add $t0 $t2 $t1
+
+Outcome: Successful (90% sure)
